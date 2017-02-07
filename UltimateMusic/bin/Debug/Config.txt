@@ -1,0 +1,7 @@
+Start/Stop:K
+Pause:I
+Next:L
+Prev:J
+UltimateKey:R
+UltimateLink:C:\Users\TheMadZergling\Desktop\musicu\Metal Gear Rising- Revengeance Soundtrack - 01. Rules of Nature (Platinum Mix).mp3
+UltimateStartTime:0:56

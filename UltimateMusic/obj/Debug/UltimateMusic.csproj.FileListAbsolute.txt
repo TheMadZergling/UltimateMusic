@@ -1,0 +1,48 @@
+c:\users\themadzergling\documents\visual studio 2015\Projects\UltimateMusic\UltimateMusic\bin\Debug\UltimateMusic.exe.config
+c:\users\themadzergling\documents\visual studio 2015\Projects\UltimateMusic\UltimateMusic\bin\Debug\UltimateMusic.exe
+c:\users\themadzergling\documents\visual studio 2015\Projects\UltimateMusic\UltimateMusic\bin\Debug\UltimateMusic.pdb
+c:\users\themadzergling\documents\visual studio 2015\Projects\UltimateMusic\UltimateMusic\obj\Debug\UltimateMusic.csprojResolveAssemblyReference.cache
+c:\users\themadzergling\documents\visual studio 2015\Projects\UltimateMusic\UltimateMusic\obj\Debug\UltimateMusic.Properties.Resources.resources
+c:\users\themadzergling\documents\visual studio 2015\Projects\UltimateMusic\UltimateMusic\obj\Debug\UltimateMusic.csproj.GenerateResource.Cache
+c:\users\themadzergling\documents\visual studio 2015\Projects\UltimateMusic\UltimateMusic\obj\Debug\UltimateMusic.exe
+c:\users\themadzergling\documents\visual studio 2015\Projects\UltimateMusic\UltimateMusic\obj\Debug\UltimateMusic.pdb
+c:\users\themadzergling\documents\visual studio 2015\Projects\UltimateMusic\UltimateMusic\obj\Debug\UltimateMusic.UltimateMusic.resources
+C:\Users\TheMadZergling\Documents\Visual Studio 2015\Projects\UltimateMusic\UltimateMusic\obj\Debug\UltimateMusic.Settings_Form.resources
+C:\Users\TheMadZergling\documents\visual studio 2015\Projects\UltimateMusic\UltimateMusic\bin\Debug\Interop.WMPLib.dll
+C:\Users\TheMadZergling\documents\visual studio 2015\Projects\UltimateMusic\UltimateMusic\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\TheMadZergling\documents\visual studio 2015\Projects\UltimateMusic\UltimateMusic\obj\Debug\Interop.WMPLib.dll
+C:\Users\TheMadZergling\documents\visual studio 2015\Projects\UltimateMusic\UltimateMusic\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\TheMadZergling\documents\visual studio 2015\Projects\UltimateMusic\UltimateMusic\obj\Debug\UltimateMusic.csproj.ResolveComReference.cache
+C:\Users\TheMadZergling\documents\visual studio 2015\Projects\UltimateMusic\UltimateMusic\obj\Debug\UltimateMusic.PlayerForm.resources
+C:\Users\TheMadZergling\Documents\Visual Studio 2015\Projects\UltimateMusic\UltimateMusic\bin\Debug\Interop.AXVLC.dll
+C:\Users\TheMadZergling\Documents\Visual Studio 2015\Projects\UltimateMusic\UltimateMusic\bin\Debug\AxInterop.AXVLC.dll
+C:\Users\TheMadZergling\Documents\Visual Studio 2015\Projects\UltimateMusic\UltimateMusic\obj\Debug\Interop.AXVLC.dll
+C:\Users\TheMadZergling\Documents\Visual Studio 2015\Projects\UltimateMusic\UltimateMusic\obj\Debug\AxInterop.AXVLC.dll
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\bin\Debug\UltimateMusic.exe.config
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\obj\Debug\Interop.AXVLC.dll
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\obj\Debug\Interop.WMPLib.dll
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\obj\Debug\AxInterop.AXVLC.dll
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\obj\Debug\UltimateMusic.csproj.ResolveComReference.cache
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\obj\Debug\UltimateMusic.exe
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\obj\Debug\UltimateMusic.pdb
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\bin\Debug\UltimateMusic.exe
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\bin\Debug\UltimateMusic.pdb
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\bin\Debug\Interop.AXVLC.dll
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\bin\Debug\Interop.WMPLib.dll
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\bin\Debug\AxInterop.AXVLC.dll
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\obj\Debug\UltimateMusic.csprojResolveAssemblyReference.cache
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\obj\Debug\UltimateMusic.UltimateMusic.resources
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\obj\Debug\UltimateMusic.PlayerForm.resources
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\obj\Debug\UltimateMusic.Properties.Resources.resources
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\obj\Debug\UltimateMusic.Settings_Form.resources
+C:\Users\TheMadZergling\Documents\GitHub\EvVegiGenyo\UltimateMusic\obj\Debug\UltimateMusic.csproj.GenerateResource.Cache
+C:\Users\TheMadZergling\Documents\GitHub\UltimateMusic\UltimateMusic\bin\Debug\UltimateMusic.exe.config
+C:\Users\TheMadZergling\Documents\GitHub\UltimateMusic\UltimateMusic\obj\Debug\Interop.AXVLC.dll
+C:\Users\TheMadZergling\Documents\GitHub\UltimateMusic\UltimateMusic\obj\Debug\Interop.WMPLib.dll
+C:\Users\TheMadZergling\Documents\GitHub\UltimateMusic\UltimateMusic\obj\Debug\AxInterop.AXVLC.dll
+C:\Users\TheMadZergling\Documents\GitHub\UltimateMusic\UltimateMusic\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\TheMadZergling\Documents\GitHub\UltimateMusic\UltimateMusic\obj\Debug\UltimateMusic.csproj.ResolveComReference.cache
+C:\Users\TheMadZergling\Documents\GitHub\UltimateMusic\UltimateMusic\obj\Debug\UltimateMusic.exe
+C:\Users\TheMadZergling\Documents\GitHub\UltimateMusic\UltimateMusic\obj\Debug\UltimateMusic.pdb
