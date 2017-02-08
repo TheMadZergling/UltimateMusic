@@ -108,7 +108,7 @@ namespace UltimateMusic
                     line = FL.ReadLine();
                     if (File.Exists(line))
                     {
-                        TheFile.Add(FL.ReadLine());
+                        TheFile.Add(line);
                     }
                 }
                 FL.Close();
@@ -128,10 +128,7 @@ namespace UltimateMusic
             StreamWriter SW = new StreamWriter("Playlist.txt");
             foreach (var item in Playlist)
             {
-                if (File.Exists(item))
-                {
                     SW.WriteLine(item);
-                }
             }
             SW.Close();
         }

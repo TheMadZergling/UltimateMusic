@@ -23,6 +23,7 @@ namespace UltimateMusic
 
         private void Settings_Form_Load(object sender, EventArgs e)
         {
+            //Betölti a válastási lehetőséget
             foreach (string item in _controller.GetKeyOptions())
             {
                 comboBox1.Items.Add(item);
@@ -31,8 +32,11 @@ namespace UltimateMusic
                 comboBox4.Items.Add(item);
                 comboBox5.Items.Add(item);
             }
-
-            // TODO : ezt átírn a settings controller classba mert ez így ronda
+            //FilePath helyett file névet ír ki
+            foreach (var item in _controller.PlaylistLoad())
+            {
+                listBox1.Items.Add(item.Split('\\')[item.Split('\\').Length - 1]);
+            }
             comboBox1.SelectedItem = _controller.GetSettingValue(0);
             comboBox2.SelectedItem = _controller.GetSettingValue(1);
             comboBox3.SelectedItem = _controller.GetSettingValue(2);
@@ -59,8 +63,7 @@ namespace UltimateMusic
         }
 
         private void comboBox_SelectedValueChanged(object sender, EventArgs e)
-        {
-            
+        {      
             _controller.ChangeSettings(int.Parse((string)((ComboBox)sender).Tag), ((ComboBox)sender).Text);
         }
 
@@ -79,6 +82,19 @@ namespace UltimateMusic
                 _controller.ChangeSettings(5, Path.GetFullPath(fd.FileName));
                 button1.BackColor = Color.White;
             }
+        }
+
+        private void chngPlaylist_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fd = new OpenFileDialog();
+            fd.InitialDirectory = "C:\\";
+            fd.Multiselect = true;
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                _controller.ModiflyPlaylist(fd.FileNames.ToList<string>());
+                listBox1.DataSource = fd.SafeFileNames;
+            }
+
         }
     }
 }

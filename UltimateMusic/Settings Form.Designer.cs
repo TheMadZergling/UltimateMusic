@@ -42,6 +42,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.numeric2 = new System.Windows.Forms.NumericUpDown();
+            this.chngPlaylist = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.numeric1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeric2)).BeginInit();
             this.SuspendLayout();
@@ -183,11 +185,31 @@
             this.numeric2.Tag = "6";
             this.numeric2.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
+            // chngPlaylist
+            // 
+            this.chngPlaylist.Location = new System.Drawing.Point(15, 203);
+            this.chngPlaylist.Name = "chngPlaylist";
+            this.chngPlaylist.Size = new System.Drawing.Size(194, 23);
+            this.chngPlaylist.TabIndex = 19;
+            this.chngPlaylist.Text = "ChangePlaylist";
+            this.chngPlaylist.UseVisualStyleBackColor = true;
+            this.chngPlaylist.Click += new System.EventHandler(this.chngPlaylist_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(215, 12);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(272, 212);
+            this.listBox1.TabIndex = 20;
+            // 
             // Settings_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(490, 227);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.chngPlaylist);
             this.Controls.Add(this.numeric2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox5);
@@ -228,5 +250,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.NumericUpDown numeric2;
+        private System.Windows.Forms.Button chngPlaylist;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
