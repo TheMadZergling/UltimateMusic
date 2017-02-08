@@ -22,22 +22,34 @@ namespace UltimateMusic
             Settings = Settngs;
             MainForm = TheMainForm;
 
-            //zenék beolvasása;
-            if (!Playlist.Contains(Settings[5]))
-            {
-                Playlist.Add(Settings[5]);
-            }
-
             //playlist-hez adás
             foreach (var item in Playlist)
             {
-                axVLCPlugin21.playlist.add("file:///"+item);
+                VlcBackground.playlist.add("file:///"+item);
                
             }
-            axVLCPlugin21.playlist.playItem(1);
+            if (Playlist.Count()!=0)
+            {
+                VlcBackground.playlist.playItem(0);
+            }
+            UltimateMusic.playlist.add("file:///"+Settings[5]); 
+            UltimateMusic.MediaPlayerEndReached+= UltimateMusic_EndofSong;
+            VlcBackground.MediaPlayerEndReached += VlcBackground_EndofPlaylist;
+
 
             //timer bekapcs
             timer1.Enabled = true;
+        }
+
+        private void VlcBackground_EndofPlaylist(object sender, EventArgs e)
+        {
+            VlcBackground.playlist.playItem(0);
+        }
+
+        private void UltimateMusic_EndofSong(object sender, EventArgs e)
+        {
+            VlcBackground.playlist.next();
+            VlcBackground.playlist.togglePause();
         }
 
         //globális változók
@@ -74,69 +86,63 @@ namespace UltimateMusic
         public void UseKey(string Key)
         {
             //swich csak statikus elemeket enged használni if-re vagyok kényszerülve
-            if (Key == Settings[0]) { StartorStop(); }
-            if (Key == Settings[1]) { Pause(); }
-            if (Key == Settings[2]) { Next(); }
-            if (Key == Settings[3]) { Prev(); }
-            if (Key == Settings[4]) { Ultimate(); }
+            if (!UltimateMusic.playlist.isPlaying)
+            {
+                if (Key == Settings[0]) { StartorStop(); }
+                if (Key == Settings[1]) { Pause(); }
+                if (Key == Settings[2]) { Next(); }
+                if (Key == Settings[3]) { Prev(); }
+                if (Key == Settings[4]) { Ultimate(); }
+            }
+            else for (int i = 0; i < 4; i++)
+                {
+                    if (Key==Settings[i])
+                    {
+                        VlcBackground.playlist.next();
+                        VlcBackground.playlist.togglePause();
+                        UltimateMusic.playlist.stop();
+                    }
+                }
         }
        
         public void StartorStop()
         {
-            if (axVLCPlugin21.playlist.isPlaying)
+            if (VlcBackground.playlist.isPlaying)
             {
-                axVLCPlugin21.playlist.stop();
+                VlcBackground.playlist.stop();
             }
             else
             {
-                axVLCPlugin21.playlist.play();
+                VlcBackground.playlist.play();
             }
-
         }
 
         private void Ultimate()
         {
-            //Előkészület
-            int wherewasi = axVLCPlugin21.playlist.currentItem;
-            Playlist.Remove(Settings[5]);
-            axVLCPlugin21.playlist.clear();
-            List<string> RePlaylist = new List<string>();
-            
-            //Egy új playlist létrehozása amelyben a zeneszámok sorrendje nem válzotik és a Settings[5] kerül elörre
-            RePlaylist.Add(Settings[5]);
-            for (int i = wherewasi; i < Playlist.Count; i++)
+            if (!UltimateMusic.playlist.isPlaying && Settings[5]!="")
             {
-                RePlaylist.Add(Playlist[i]);
+                UltimateMusic.playlist.playItem(0);
+                UltimateMusic.input.time = (1000 * (int.Parse(Settings[6].Split(':')[0]) * 60 + int.Parse(Settings[6].Split(':')[1])));
+                VlcBackground.playlist.togglePause();
             }
-           for (int i = 0; i < wherewasi; i++)
-            {
-                RePlaylist.Add(Playlist[i]);
-            }
-            Playlist = RePlaylist;
 
-            //A playlist újra írása
-            foreach (var item in Playlist)
-            {
-                axVLCPlugin21.playlist.add("file:///"+item);
-            }
-            //lejátszás
-            axVLCPlugin21.playlist.playItem(0);
-            axVLCPlugin21.input.time = (1000*(int.Parse(Settings[6].Split(':')[0])*60+ int.Parse(Settings[6].Split(':')[1])));
         }
+
+
 
         private void Prev()
         {
-            axVLCPlugin21.playlist.prev();
+            VlcBackground.playlist.prev();
         }
 
         private void Next()
         {
-            axVLCPlugin21.playlist.next();
+            VlcBackground.playlist.next();
         }
 
         private void Pause()
         {
-            axVLCPlugin21.playlist.togglePause();
+            VlcBackground.playlist.togglePause();
         }
 
         private void PlayerForm_FormClosing(object sender, FormClosingEventArgs e)

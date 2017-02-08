@@ -96,5 +96,11 @@ namespace UltimateMusic
             }
 
         }
+
+        private void EmptyButton_Click(object sender, EventArgs e)
+        {
+            _controller.ModiflyPlaylist(new List<string>());
+            listBox1.DataSource = _controller.PlaylistLoad();
+        }
     }
 }

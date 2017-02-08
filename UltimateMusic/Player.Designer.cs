@@ -31,8 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayerForm));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.axVLCPlugin21 = new AxAXVLC.AxVLCPlugin2();
-            ((System.ComponentModel.ISupportInitialize)(this.axVLCPlugin21)).BeginInit();
+            this.VlcBackground = new AxAXVLC.AxVLCPlugin2();
+            this.UltimateMusic = new AxAXVLC.AxVLCPlugin2();
+            ((System.ComponentModel.ISupportInitialize)(this.VlcBackground)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UltimateMusic)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -40,25 +42,39 @@
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // axVLCPlugin21
+            // VlcBackground
             // 
-            this.axVLCPlugin21.Enabled = true;
-            this.axVLCPlugin21.Location = new System.Drawing.Point(-7, -7);
-            this.axVLCPlugin21.Name = "axVLCPlugin21";
-            this.axVLCPlugin21.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axVLCPlugin21.OcxState")));
-            this.axVLCPlugin21.Size = new System.Drawing.Size(320, 240);
-            this.axVLCPlugin21.TabIndex = 0;
+            this.VlcBackground.CausesValidation = false;
+            this.VlcBackground.Enabled = true;
+            this.VlcBackground.Location = new System.Drawing.Point(2, 3);
+            this.VlcBackground.Name = "VlcBackground";
+            this.VlcBackground.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("VlcBackground.OcxState")));
+            this.VlcBackground.Size = new System.Drawing.Size(306, 227);
+            this.VlcBackground.TabIndex = 0;
+            // 
+            // UltimateMusic
+            // 
+            this.UltimateMusic.Enabled = true;
+            this.UltimateMusic.Location = new System.Drawing.Point(314, 3);
+            this.UltimateMusic.Name = "UltimateMusic";
+            this.UltimateMusic.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("UltimateMusic.OcxState")));
+            this.UltimateMusic.Size = new System.Drawing.Size(308, 227);
+            this.UltimateMusic.TabIndex = 1;
             // 
             // PlayerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 232);
-            this.Controls.Add(this.axVLCPlugin21);
+            this.ClientSize = new System.Drawing.Size(619, 180);
+            this.Controls.Add(this.UltimateMusic);
+            this.Controls.Add(this.VlcBackground);
+            this.MaximumSize = new System.Drawing.Size(635, 219);
+            this.MinimumSize = new System.Drawing.Size(635, 219);
             this.Name = "PlayerForm";
             this.Text = "UltimateMusicPlayer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PlayerForm_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.axVLCPlugin21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VlcBackground)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UltimateMusic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -66,6 +82,7 @@
         #endregion
 
         private System.Windows.Forms.Timer timer1;
-        private AxAXVLC.AxVLCPlugin2 axVLCPlugin21;
+        private AxAXVLC.AxVLCPlugin2 VlcBackground;
+        private AxAXVLC.AxVLCPlugin2 UltimateMusic;
     }
 }
