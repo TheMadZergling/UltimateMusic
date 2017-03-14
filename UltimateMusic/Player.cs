@@ -55,7 +55,6 @@ namespace UltimateMusic
         //globális változók
         List<string> Settings;
         Form MainForm;
-        List<string> Playlist;
 
         //dll import       
         [DllImport("User32.dll")]

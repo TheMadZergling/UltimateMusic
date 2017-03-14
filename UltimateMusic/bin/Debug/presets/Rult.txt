@@ -2,6 +2,6 @@ Start/Stop:K
 Pause:I
 Next:L
 Prev:J
-UltimateKey:V
+UltimateKey:R
 UltimateLink:C:\Users\TheMadZergling\Desktop\musicu\AMV- MEP  Happy Birthday ActiveNoise.mp3
 UltimateStartTime:0:50

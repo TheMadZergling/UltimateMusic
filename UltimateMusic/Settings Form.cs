@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UltimateMusic
@@ -37,6 +33,12 @@ namespace UltimateMusic
             {
                 listBox1.Items.Add(item.Split('\\')[item.Split('\\').Length - 1]);
             }
+            SetSelected();
+
+        }
+
+        private void SetSelected()
+        {
             comboBox1.SelectedItem = _controller.GetSettingValue(0);
             comboBox2.SelectedItem = _controller.GetSettingValue(1);
             comboBox3.SelectedItem = _controller.GetSettingValue(2);
@@ -52,8 +54,16 @@ namespace UltimateMusic
             string[] asd = _controller.GetSettingValue(6).Split(':');
             numeric1.Value = int.Parse(asd[0]);
             numeric2.Value = int.Parse(asd[1]);
+            if (comboBox6.Items.Count==0)
+            {
 
-
+                foreach (var item in Directory.EnumerateFiles("presets", "*.txt"))
+                {
+                    string asdd = item.Substring(8);
+                    int asddd = asdd.LastIndexOf(".txt");
+                    comboBox6.Items.Add(asdd.Remove(asddd, 4));
+                }
+            }
         }
         
         private void Settings_Form_FormClosing(object sender, FormClosingEventArgs e)
@@ -101,6 +111,21 @@ namespace UltimateMusic
         {
             _controller.ModiflyPlaylist(new List<string>());
             listBox1.DataSource = _controller.PlaylistLoad();
+        }
+
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _controller.LoadPreset(comboBox6.Text);
+            SetSelected();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            _controller.AddPreset(comboBox6.Text);
+            if (comboBox6.Items.Contains(comboBox6.Text))
+            {
+                comboBox6.Items.Add(comboBox6.Text);
+            }
         }
     }
 }

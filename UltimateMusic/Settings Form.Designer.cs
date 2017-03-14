@@ -45,6 +45,8 @@
             this.chngPlaylist = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.EmptyButton = new System.Windows.Forms.Button();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numeric1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeric2)).BeginInit();
             this.SuspendLayout();
@@ -78,12 +80,12 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 149);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(12, 144);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(19, 13);
+            this.label4.Size = new System.Drawing.Size(97, 46);
             this.label4.TabIndex = 7;
-            this.label4.Text = "co";
+            this.label4.Text = "UltimateMusic StartTime (Min|Sec)";
             // 
             // comboBox1
             // 
@@ -120,7 +122,7 @@
             // 
             // numeric1
             // 
-            this.numeric1.Location = new System.Drawing.Point(88, 147);
+            this.numeric1.Location = new System.Drawing.Point(115, 149);
             this.numeric1.Name = "numeric1";
             this.numeric1.Size = new System.Drawing.Size(44, 20);
             this.numeric1.TabIndex = 11;
@@ -199,7 +201,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(215, 12);
+            this.listBox1.Location = new System.Drawing.Point(215, 10);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(272, 186);
             this.listBox1.TabIndex = 20;
@@ -214,11 +216,32 @@
             this.EmptyButton.UseVisualStyleBackColor = true;
             this.EmptyButton.Click += new System.EventHandler(this.EmptyButton_Click);
             // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(15, 232);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(338, 21);
+            this.comboBox6.TabIndex = 22;
+            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(359, 230);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(128, 23);
+            this.button2.TabIndex = 23;
+            this.button2.Text = "Add Preset";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Settings_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 227);
+            this.ClientSize = new System.Drawing.Size(490, 255);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.comboBox6);
             this.Controls.Add(this.EmptyButton);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.chngPlaylist);
@@ -265,5 +288,7 @@
         private System.Windows.Forms.Button chngPlaylist;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button EmptyButton;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.Button button2;
     }
 }

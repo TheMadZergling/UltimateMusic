@@ -9,7 +9,7 @@ namespace UltimateMusic
 {
     class SettingsController
     {
-        //ellenörzi/ hiba esetén újraírja a settings file-t
+        //ellenörzi/ hiba esetén újraírja a settings/playlist file-t/okat
         public bool FilesVaildate()
         {
             #region Config.txt
@@ -68,7 +68,6 @@ namespace UltimateMusic
             #endregion
 
             return true;
-
         }
 
         //beolvassa a Config file-t
@@ -91,11 +90,9 @@ namespace UltimateMusic
                 ReWriteFile();
                 return ConfigFileLoad();
             }
-
-
         }
 
-        //az érvényes adatokat kiolvassa a file-ból
+        //Csak az érvényes adatokat olvassa ki a file-ból
         public List<string> PlaylistLoad()
         {
             string line;
@@ -121,8 +118,8 @@ namespace UltimateMusic
                 return PlaylistLoad();
             }
         }
-
         
+        //A playlistet tárolja
         public void ModiflyPlaylist(List<string> Playlist)
         {
             StreamWriter SW = new StreamWriter("Playlist.txt");
@@ -164,6 +161,47 @@ namespace UltimateMusic
                 }
             }
             reWriter.Close();
+        }
+
+        //betölti egy adott preset tartalmás és azt ellenörzi
+        public List<string> LoadPreset(string presetname)
+        {
+            try
+            {
+                StreamReader SR = new StreamReader("presets/" + presetname + ".txt");
+                StreamWriter SW = new StreamWriter("config.txt");
+                while (!SR.EndOfStream)
+                {
+                    SW.WriteLine(SR.ReadLine());
+                }
+                SR.Close();
+                SW.Close();
+                FilesVaildate();
+                return GetAllOptionValue();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("A file már nem létezik");
+                throw;
+            }
+            
+        }
+        
+        //új presetet hozz létre
+        public void AddPreset(string presetname)
+        {
+            StreamReader SR = new StreamReader("config.txt");
+            if (!Directory.Exists("presets"))
+            {
+                Directory.CreateDirectory("presets");
+            }
+            StreamWriter SW = new StreamWriter("presets/" + presetname + ".txt");
+            while (!SR.EndOfStream)
+            {
+                SW.WriteLine(SR.ReadLine());
+            }
+            SR.Close();
+            SW.Close();
         }
 
         //ellenőrzi hogy billyenyű-e a string
