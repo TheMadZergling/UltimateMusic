@@ -49,27 +49,28 @@
             this.VlcBackground.Location = new System.Drawing.Point(2, 3);
             this.VlcBackground.Name = "VlcBackground";
             this.VlcBackground.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("VlcBackground.OcxState")));
-            this.VlcBackground.Size = new System.Drawing.Size(306, 227);
+            this.VlcBackground.Size = new System.Drawing.Size(305, 226);
             this.VlcBackground.TabIndex = 0;
             // 
             // UltimateMusic
             // 
             this.UltimateMusic.Enabled = true;
-            this.UltimateMusic.Location = new System.Drawing.Point(314, 3);
+            this.UltimateMusic.Location = new System.Drawing.Point(2, 3);
             this.UltimateMusic.Name = "UltimateMusic";
             this.UltimateMusic.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("UltimateMusic.OcxState")));
-            this.UltimateMusic.Size = new System.Drawing.Size(308, 227);
+            this.UltimateMusic.Size = new System.Drawing.Size(307, 226);
             this.UltimateMusic.TabIndex = 1;
+            this.UltimateMusic.Visible = false;
             // 
             // PlayerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 180);
+            this.ClientSize = new System.Drawing.Size(310, 229);
             this.Controls.Add(this.UltimateMusic);
             this.Controls.Add(this.VlcBackground);
-            this.MaximumSize = new System.Drawing.Size(635, 219);
-            this.MinimumSize = new System.Drawing.Size(635, 219);
+            this.MaximumSize = new System.Drawing.Size(10000, 10000);
+            this.MinimumSize = new System.Drawing.Size(1, 1);
             this.Name = "PlayerForm";
             this.Text = "UltimateMusicPlayer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PlayerForm_FormClosing);

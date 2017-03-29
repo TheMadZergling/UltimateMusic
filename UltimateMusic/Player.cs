@@ -97,9 +97,11 @@ namespace UltimateMusic
                 {
                     if (Key==Settings[i])
                     {
+                        VlcBackground.Visible = true;
                         VlcBackground.playlist.next();
                         VlcBackground.playlist.togglePause();
                         UltimateMusic.playlist.stop();
+                        UltimateMusic.Visible = false;
                     }
                 }
         }
@@ -120,11 +122,12 @@ namespace UltimateMusic
         {
             if (!UltimateMusic.playlist.isPlaying && Settings[5]!="")
             {
+                UltimateMusic.Visible = true;
                 UltimateMusic.playlist.playItem(0);
                 UltimateMusic.input.time = (1000 * (int.Parse(Settings[6].Split(':')[0]) * 60 + int.Parse(Settings[6].Split(':')[1])));
                 VlcBackground.playlist.togglePause();
+                VlcBackground.Visible = false;
             }
-
         }
 
 
@@ -155,3 +158,4 @@ namespace UltimateMusic
         }
     }
 }
+    

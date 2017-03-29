@@ -122,7 +122,7 @@ namespace UltimateMusic
         private void button2_Click(object sender, EventArgs e)
         {
             _controller.AddPreset(comboBox6.Text);
-            if (comboBox6.Items.Contains(comboBox6.Text))
+            if (!comboBox6.Items.Contains(comboBox6.Text))
             {
                 comboBox6.Items.Add(comboBox6.Text);
             }
