@@ -21,6 +21,18 @@ namespace UltimateMusic
             //Golbális Változók értékének megadása
             Settings = Settngs;
             MainForm = TheMainForm;
+            keyid = new List<int>();
+            foreach (int item in Enum.GetValues(typeof(Keys)))
+            {
+                for (int i = 0; i <5; i++)
+                {
+                    if (Settings[i].Contains(Enum.GetName(typeof(Keys), item)))
+                    {
+                        keyid.Add(item);
+                    }
+                }
+            }
+
 
             //playlist-hez adás
             foreach (var item in Playlist)
@@ -55,6 +67,7 @@ namespace UltimateMusic
         //globális változók
         List<string> Settings;
         Form MainForm;
+        List<int> keyid;
 
         //dll import       
         [DllImport("User32.dll")]
@@ -67,7 +80,7 @@ namespace UltimateMusic
         {
             try
             {
-                foreach (int i in Enum.GetValues(typeof(Keys)))
+                foreach (int i in keyid)
                 {
                     if (GetAsyncKeyState(i) == -32767)
                     {

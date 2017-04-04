@@ -48,7 +48,7 @@ namespace UltimateMusic
             if (_controller.GetSettingValue(5) == "")
             {
                 button1.BackColor = Color.Red;
-                MessageBox.Show("The ultimate's music file is not set yet. It is recomended to set it now.");
+                MessageBox.Show("Az Ultimate zene fájl még nincs beálítva, Ezt ajánlott Lejátszás elött beálítani. (Ezt a nagy vörös gomb segítségével teheted meg)");
             }
             //Felveszem Változóként hogy a Value Változás ne írja át 0-ra a "numeric2"-t
             string[] asd = _controller.GetSettingValue(6).Split(':');
@@ -126,6 +126,11 @@ namespace UltimateMusic
             {
                 comboBox6.Items.Add(comboBox6.Text);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

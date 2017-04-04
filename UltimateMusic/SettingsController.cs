@@ -44,7 +44,6 @@ namespace UltimateMusic
             if (!System.IO.File.Exists(removeFirstPart(TheFile[5])) && TheFile[5].Split(':')[1] != "")
             {
                 ReWriteFile();
-                MessageBox.Show(TheFile[5].Substring(13, TheFile[5].Length - 13));
                 return false;
             }
 
@@ -142,6 +141,7 @@ namespace UltimateMusic
             reWriter.WriteLine("UltimateLink:");
             reWriter.WriteLine("UltimateStartTime:0:00");
             reWriter.Close();
+            MessageBox.Show("A Config Fájl sérült vagy hibásan kitöltött volt. A program újraírja az...");
         }
 
         //egy adott adatok átír a Configfile-ban
