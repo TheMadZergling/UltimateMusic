@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Untitled.cs">
+    <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Untitled.Designer.cs">
-      <DependentUpon>Untitled.cs</DependentUpon>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Player.cs">
       <SubType>Form</SubType>
@@ -68,8 +68,8 @@
       <DependentUpon>Settings Form.cs</DependentUpon>
     </Compile>
     <Compile Include="SettingsController.cs" />
-    <EmbeddedResource Include="Untitled.resx">
-      <DependentUpon>Untitled.cs</DependentUpon>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Player.resx">
       <DependentUpon>Player.cs</DependentUpon>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -89,8 +90,25 @@ namespace UltimateMusic
             fd.RestoreDirectory = true;
             if (fd.ShowDialog()==DialogResult.OK)
             {
-                _controller.ChangeSettings(5, Path.GetFullPath(fd.FileName));
-                button1.BackColor = Color.White;
+                bool b = true;
+                foreach (var item in fd.FileNames)
+                {
+                    foreach (var ekezet in "éáűúőöüó")
+                    {
+                        if (item.Contains(ekezet))
+                        {
+                            b = false;
+                        }
+                    }
+                }
+                if (b)
+                {
+                    _controller.ChangeSettings(5, Path.GetFullPath(fd.FileName));
+                    button1.BackColor = Color.White;
+                }
+                else MessageBox.Show("Ékezetet tartalmaz a fájl elérésiu újta vagy neve. Kérem változtassa meg a nevét vagy helyezze át másik mappába. Ha nem teszi meg lehet hogy a fájlok nem leszen késöbb elérhetőek a program számára.");
+
+                
             }
         }
 
@@ -101,8 +119,24 @@ namespace UltimateMusic
             fd.Multiselect = true;
             if (fd.ShowDialog() == DialogResult.OK)
             {
-                _controller.ModiflyPlaylist(fd.FileNames.ToList<string>());
-                listBox1.DataSource = fd.SafeFileNames;
+                bool b = true;
+                foreach (var item in fd.FileNames)
+                {
+                    foreach (var ekezet in "éáűúőöüó")
+                    {
+                        if (item.Contains(ekezet))
+                        {
+                            b = false;
+                        }
+                    }
+                }
+                if (b)
+                {
+                    _controller.ModiflyPlaylist(fd.FileNames.ToList<string>());
+                    listBox1.DataSource = fd.SafeFileNames;
+                }
+                else MessageBox.Show("Ékezetet tartalmaz az egyik fájl elérésiu újta vagy neve. Kérem változtassa meg a nevét vagy helyezze át másik mappába. Ha nem teszi meg lehet hogy a fájlok nem leszen késöbb elérhetőek a program számára."); 
+                
             }
 
         }
